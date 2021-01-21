@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="botconfig",
-    version="1.0.0",
+    version="1.0.1",
     description="A simple discord bot configuration utility",
     long_description=open("README.md").read(),
     author="tag-epic",
