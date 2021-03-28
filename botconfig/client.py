@@ -19,14 +19,14 @@ class BotConfig:
         user = self._get_user(user)
 
         route = Route("POST", "/{guild_id}/bot/{bot_id}/grant_access", guild_id=guild, bot_id=self.bot_id)
-        await self.http.request(route, data=user)
+        await self.http.request(route, json=user)
 
     async def revoke_access(self, guild, user):
         guild = self._get_guild(guild)
         user = self._get_user(user)
 
         route = Route("POST", "/{guild_id}/bot/{bot_id}/revoke_access", guild_id=guild, bot_id=self.bot_id)
-        await self.http.request(route, data=user)
+        await self.http.request(route, json=user)
 
     async def get_config(self, guild):
         guild = self._get_guild(guild)
